@@ -36,6 +36,6 @@ $ npm install encodeid
 # Source Code
 
 ```bash
-$ git clone git://github.com/Slyke/encodeid.git --depth 1
+$ git clone git://github.com/Slyke/encodeID.git --depth 1
 $ cd encodeid
 ```
