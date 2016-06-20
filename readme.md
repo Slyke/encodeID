@@ -1,5 +1,9 @@
 
-#Encode ID
+# Encode ID
+
+## Description
+Small npm module for encoding IDs into randomish looking strings.
+Strings can be encoded, but it is not suggested. At least, not yet.
 
 ## Usage:
 ```js
@@ -33,7 +37,7 @@ if (result) {
 $ npm install encodeid
 ```
 
-# Source Code
+## Source Code
 
 ```bash
 $ git clone git://github.com/Slyke/encodeID.git --depth 1
