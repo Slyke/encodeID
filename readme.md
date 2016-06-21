@@ -60,7 +60,7 @@ $ cd encodeid
 
 ## Known Issues and Bugs
 
-* When using single ID numbers as inputs, there can sometimes be a leading 0 when decoding.
+* When using single digit ID numbers as inputs, there can sometimes be a leading 0 when decoding.
 
 ## Planned Features
 
