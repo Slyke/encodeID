@@ -57,3 +57,11 @@ $ npm install encodeid
 $ git clone git://github.com/Slyke/encodeID.git --depth 1
 $ cd encodeid
 ```
+
+## Known Issues and Bugs
+
+* When using single ID numbers as inputs, there can sometimes be a leading 0 when decoding.
+
+## Planned Features
+
+* Add in optional parameter to encode and decode using ASCII or UNICODE (Current way) for smaller encoded output strings.
