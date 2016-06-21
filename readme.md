@@ -8,7 +8,7 @@ Strings can be encoded as well. They'll be converted to their unicode representa
 
 ## Usage:
 ```js
-var encodeID = require('encodeid')();
+var encodeID = require('encodeID')();
 
 myString = "My URL String"; // You can just place in an ID number instead of a string. eg: myString = 51;
 console.log("Original String: ", myString);
@@ -48,14 +48,14 @@ Please do NOT use this for anything secure, such as encrypting passwords or othe
 ## Installation
 
 ```bash
-$ npm install encodeid
+$ npm install encodeID
 ```
 
 ## Source Code
 
 ```bash
 $ git clone git://github.com/Slyke/encodeID.git --depth 1
-$ cd encodeid
+$ cd encodeID
 ```
 
 ## Known Issues and Bugs

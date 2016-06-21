@@ -1,6 +1,6 @@
 {
   "name": "encodeID",
-  "version": "1.0.11",
+  "version": "1.0.111",
   "description": "Simple package for generating random looking text that's based off an ID number (or any string).",
   "main": "index.js",
   "scripts": {
