@@ -6,6 +6,10 @@
   "scripts": {
     "test": "node test/basic.js"
   },
-  "author": "Slyke",
+  "author": "Slyke <steven.lawler777@gmail.com>",
+  "contributors": [{
+    "name": "Slyke",
+    "email": "steven.lawler777@gmail.com"
+  }],
   "license": "MIT"
 }
