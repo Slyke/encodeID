@@ -1,17 +1,21 @@
 var encodeID = require('..')();
 
 myString = "My URL String";
-console.log("Original String: ", myString);
+console.log("Original String:               ", myString);
 
-var encodedString = encodeID.encode(myString);
-console.log("Encoded: ", encodedString);
+var encodedStringUNICODE = encodeID.encode(myString);
+var encodedStringASCII = encodeID.encode(myString, true);
+console.log("Encoded as UNICODE:            ", encodedStringUNICODE);
+console.log("Encoded as ASCII:              ", encodedStringASCII);
 
-var decodedString = encodeID.decode(encodedString);
-console.log("Decoded String: ", decodedString);
+var decodedStringFromUNICODE = encodeID.decode(encodedStringUNICODE);
+var decodedStringFromASCII = encodeID.decode(encodedStringASCII, true);
+console.log("Decoded String (From UNICODE): ", decodedStringFromUNICODE);
+console.log("Decoded String (From ASCII):   ", decodedStringFromASCII);
 
-var result = (decodedString === myString);
+var result = (decodedStringFromUNICODE === myString);
 
-console.log("Strings Match: ", result);
+console.log("Strings Match:                 ", result);
 if (result) {
   console.log("Success!");
   process.exit(0)

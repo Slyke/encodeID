@@ -11,17 +11,24 @@ Strings can be encoded as well. They'll be converted to their unicode representa
 var encodeID = require('encodeID')();
 
 myString = "My URL String"; // You can just place in an ID number instead of a string. eg: myString = 51;
-console.log("Original String: ", myString);
+console.log("Original String:               ", myString);
 
-var encodedString = encodeID.encode(myString);
-console.log("Encoded: ", encodedString);
+// Not that it doesn't matter if it's set to unicode or ascii when dealing with integers. They are not encoded at all.
+var encodedStringUNICODE = encodeID.encode(myString); // UNICODE encoding (makes it longer, but will work on ALL characters).
+var encodedStringASCII = encodeID.encode(myString, true); // ASCII encoding (shorter, but will only work on standard ASCII characters).
 
-var decodedString = encodeID.decode(encodedString);
-console.log("Decoded String: ", decodedString);
+console.log("Encoded as UNICODE:            ", encodedStringUNICODE);
+console.log("Encoded as ASCII:              ", encodedStringASCII);
 
-var result = (decodedString === myString);
+var decodedStringFromUNICODE = encodeID.decode(encodedStringUNICODE);
+var decodedStringFromASCII = encodeID.decode(encodedStringASCII, true); // Ensure to put true for the second parameter to decode ASCII instead of UNICODE
 
-console.log("Strings Match: ", result);
+console.log("Decoded String (From UNICODE): ", decodedStringFromUNICODE);
+console.log("Decoded String (From ASCII):   ", decodedStringFromASCII);
+
+var result = (decodedStringFromUNICODE === myString);
+
+console.log("Strings Match:                 ", result);
 if (result) {
   console.log("Success!");
   process.exit(0)
@@ -30,13 +37,16 @@ if (result) {
   process.exit(1)
 }
 
+
 /*
 Should produce the following output:
 
-Original String:  My URL String
-Encoded:  MHMwMDRkMDA3OTAwMjAwMDU1MDA1MjAwNGMwMDIwMDA1MzAwNzQwMDcyMDA2OTAwNmUwMDY3
-Decoded String:  My URL String
-Strings Match:  true
+Original String:                My URL String
+Encoded as UNICODE:             MHMwMDRkMDA3OTAwMjAwMDU1MDA1MjAwNGMwMDIwMDA1MzAwNzQwMDcyMDA2OTAwNmUwMDY3
+Encoded as ASCII:               LTBfczRkNzkyMDU1NTI0YzIwNTM3NDcyNjk2ZTY3
+Decoded String (From UNICODE):  My URL String
+Decoded String (From ASCII):    My URL String
+Strings Match:                  true
 Success!
 // */
 
@@ -58,10 +68,23 @@ $ git clone git://github.com/Slyke/encodeID.git --depth 1
 $ cd encodeID
 ```
 
+## Tests
+
+Download the source or clone the repo.
+
+You can run tests by entering these commands from inside the source code main directory:
+* node test/random_alphanumeric_string.js - Test and compare randomly generated alphanumeric strings.
+* node test/random_number.js - Test and compare randomly generated numbers.
+* node test/random_string.js - Test and compare randomly strings, including special characters, spaces and the like.
+* node test/id_list.js - Test and compare integers between 5 and 15.
+* node test/basic.js - Basically a copy of the code in the Usage example code.
+
+You can easily edit these tests. Most of the useful variables are located at the top of the test file for easy editing.
+
 ## Known Issues and Bugs
 
-* When using single digit ID numbers as inputs, there can sometimes be a leading 0 when decoding.
+* None known.
 
 ## Planned Features
 
-* Add in optional parameter to encode and decode using ASCII or UNICODE (Current way) for smaller encoded output strings.
+* Got suggestions? Let me know! Alternatively, you can clone and submit a pull request for your own changes to the code.
