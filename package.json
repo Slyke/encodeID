@@ -1,10 +1,14 @@
 {
   "name": "encodeID",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Simple package for generating random looking text that's based off an ID number (or any string).",
   "main": "index.js",
   "scripts": {
     "test": "node test/basic.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Slyke/encodeID.git"
   },
   "author": "Slyke <steven.lawler777@gmail.com>",
   "contributors": [{
