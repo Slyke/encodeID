@@ -1,10 +1,11 @@
 {
-  "name": "encodeID",
-  "version": "1.0.3",
+  "name": "encodeid",
+  "version": "1.0.4",
   "description": "Simple package for generating random looking text that's based off an ID number (or any string).",
   "main": "index.js",
   "scripts": {
-    "test": "node test/basic.js"
+    "test": "node test/basic.js",
+    "testall": "node test/basic.js && node test/random_alphanumeric_string.js && node test/random_number.js && node test/random_string.js && node test/id_list.js"
   },
   "repository": {
     "type": "git",

@@ -79,6 +79,8 @@ You can run tests by entering these commands from inside the source code main di
 * node test/id_list.js - Test and compare integers between 5 and 15.
 * node test/basic.js - Basically a copy of the code in the Usage example code.
 
+Alternatively, you can use ```npm test``` for the basic test, and ```npm run testall``` for all tests.
+
 You can easily edit these tests. Most of the useful variables are located at the top of the test file for easy editing.
 
 ## Known Issues and Bugs
